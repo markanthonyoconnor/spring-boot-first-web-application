@@ -9,12 +9,14 @@
     <body>
         <h1>Your todos</h1>
         <table class="table table-striped">
-        <caption> Your todos</caption>
+        <caption> Your todos are</caption>
         <thead>
             <tr>
                 <th>Description</th>
                 <th>Target Date</th>
                 <th>Is it Done</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>

@@ -13,13 +13,10 @@ public class TodoService {
     private static int todoCount = 3;
 
     static {
-        todos.add(new Todo(1, "in28Minutes", "Learn Spring boot", new Date(),
-                false));
+        todos.add(new Todo(1, "in28Minutes", "Learn Spring boot", new Date(), false));
         todos.add(new Todo(2, "in28Minutes", "Learn Micro services", new Date(), false));
-        todos.add(new Todo(3, "in28Minutes", "Learn Hibernate", new Date(),
-                false));
+        todos.add(new Todo(3, "in28Minutes", "Learn Hibernate", new Date(), false));
     }
-
     public List<Todo> retrieveTodos(String user) {
         List<Todo> filteredTodos = new ArrayList<Todo>();
         for (Todo todo : todos) {
@@ -28,11 +25,6 @@ public class TodoService {
             }
         }
         return filteredTodos;
-    }
-
-    public void addTodo(String name, String desc, Date targetDate,
-                        boolean isDone) {
-        todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
     }
 
     public Todo retrieveTodos(int id) {
@@ -49,10 +41,10 @@ public class TodoService {
         todos.add(todo);
     }
 
-
-
-
-
+    public void addTodo(String name, String desc, Date targetDate,
+                        boolean isDone) {
+        todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
+    }
     public void deleteTodo(int id) {
         Iterator<Todo> iterator = todos.iterator();
         while (iterator.hasNext()) {
